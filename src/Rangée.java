@@ -2,5 +2,7 @@ import java.awt.Color;
 
 public class Rangée {
 	
-	private Color[] jetons;
+	private Color[] jetons = new Color[Modèle.DIFFICULTE];
+	
+	public int indiceJeton = 0;
 }
