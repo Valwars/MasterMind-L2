@@ -48,7 +48,7 @@ public class Modèle {
 		
 		for(int i = 0;i < DIFFICULTE; i ++) {
 			
-			if(!this.combinaison.testCouleur(prop.getIndexColor(i), i)) {
+			if(!this.combinaison.testCouleur(propositions[tentative].getIndexColor(i), i)) {
 				drap = false;
 			}
 		}

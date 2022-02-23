@@ -37,6 +37,7 @@ public class Rangée {
 	}
 	
 	public Color getIndexColor(int i) {
+		
 		return jetons[i];
 	}
 	

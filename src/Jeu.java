@@ -10,7 +10,7 @@ public class Jeu {
 		mod.addPropositionColor(Color.WHITE);
 		mod.addPropositionColor(Color.YELLOW);
 		
-		mod.verifyProposition();
+		System.out.println("" + mod.verifyProposition());
 	}
 
 }
