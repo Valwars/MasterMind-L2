@@ -8,10 +8,9 @@ public class Rangée {
 	public int indiceJeton = 0;
 	
 	public int noir;
+	
 	public int blanc;
 	
-	
-
 	
 	public Rangée() {
 		
@@ -30,6 +29,15 @@ public class Rangée {
 		}
 		
 		return ch;
+	}
+	
+	public boolean testCouleur(Color c, int i) {
+		
+		return jetons[i] == c;
+	}
+	
+	public Color getIndexColor(int i) {
+		return jetons[i];
 	}
 	
 }
