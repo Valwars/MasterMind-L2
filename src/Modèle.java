@@ -55,8 +55,10 @@ public class Modèle {
 		
 		if(drap) {
 			this.état = Etat.GAGNE;
-		}else if(!drap && tentative == N_TENTATIVES) {
+			System.out.println("VOUS AVEZ GAGNEZ");
+		}else if((tentative +1 ) == N_TENTATIVES) {
 			this.état = Etat.PERDU;
+			
 		}
 		
 		return drap;
@@ -77,10 +79,22 @@ public class Modèle {
 	
 		
 		if(this.current_prop == 4) {
+		
 			System.out.println("Votre proposition est : "+this.verifyProposition());
-			this.current_prop = 0;
+	
 			System.out.println("Vous avez fait 4 prop, pour la tentative : "+ (this.tentative +1) + "/"+N_TENTATIVES +" nouvelle tentative...");
 			this.tentative += 1;
+			if(this.état ==  Etat.PERDU) {
+				System.out.println("Vous avez perdu la partie");
+				
+			}else if(this.état ==  Etat.GAGNE){
+				System.out.println("Vous avez perdu la partie");
+				System.exit(0);
+
+			}
+			
+			this.current_prop = 0;
+		
 			
 		}
 			
