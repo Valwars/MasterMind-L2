@@ -37,7 +37,7 @@ public class Modèle {
 			this.combinaison.addColor(COULEURS[rnd.nextInt(COULEURS.length)], i);
 		}
 		
-		System.out.println(this.combinaison.toString());
+		System.out.println("COMBINAISON A TROUVER : \n" +this.combinaison.toString());
 		
 		
 	}
@@ -79,7 +79,7 @@ public class Modèle {
 		if(this.current_prop == 4) {
 			System.out.println("Votre proposition est : "+this.verifyProposition());
 			this.current_prop = 0;
-			System.out.println("Vous avez fait 4 prop, retour a une nouvelle tentative : "+this.tentative);
+			System.out.println("Vous avez fait 4 prop, pour la tentative : "+ (this.tentative +1) + "/"+N_TENTATIVES +" nouvelle tentative...");
 			this.tentative += 1;
 			
 		}
