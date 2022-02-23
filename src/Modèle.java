@@ -23,7 +23,6 @@ public class Modèle {
 	
 
 	
-	
 	public  Modèle() {
 		
 		this.propositions = new Rangée[N_TENTATIVES];
@@ -48,6 +47,8 @@ public class Modèle {
 		
 		for(int i = 0;i < DIFFICULTE; i ++) {
 			
+			System.out.println(propositions[tentative].getIndexColor(i));
+			System.out.println(this.combinaison.testCouleur(propositions[tentative].getIndexColor(i), i));
 			if(!this.combinaison.testCouleur(propositions[tentative].getIndexColor(i), i)) {
 				drap = false;
 			}
@@ -59,30 +60,25 @@ public class Modèle {
 	
 	public void addPropositionColor(Color c) {
 		
-		if(this.propositions[this.current_prop] == null) {
+		if(this.propositions[tentative] == null) {
 			
-			this.propositions[this.current_prop] = new Rangée();
+			this.propositions[tentative] = new Rangée();
 		}
 		
-		this.propositions[this.current_prop].addColor(c, this.current_prop);
+		this.propositions[tentative].addColor(c, this.current_prop);
+		
 		
 		this.current_prop += 1;
-		System.out.println( this.current_prop + " proposition");
+	
 		
 		if(this.current_prop == 4) {
+			System.out.println("Votre proposition est : "+this.verifyProposition());
 			this.current_prop = 0;
-			System.out.println("Vous avez fait 4 prop, retour a une nouvelle tentative");
+			System.out.println("Vous avez fait 4 prop, retour a une nouvelle tentative : "+this.tentative);
+			this.tentative += 1;
+			
 		}
-		
-	
-		
-
-		
-		
-		
+			
 	}
 	
-	
-
-
 }

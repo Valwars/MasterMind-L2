@@ -6,11 +6,13 @@ public class Jeu {
 		Modèle mod = new Modèle();
 		
 		mod.addPropositionColor(Color.GREEN);
-		mod.addPropositionColor(Color.RED);
-		mod.addPropositionColor(Color.WHITE);
-		mod.addPropositionColor(Color.YELLOW);
+		mod.addPropositionColor(Color.blue);
+		mod.addPropositionColor(Color.yellow);
+		mod.addPropositionColor(Color.MAGENTA);
 		
-		System.out.println("" + mod.verifyProposition());
+		
+		
+
 	}
 
 }
