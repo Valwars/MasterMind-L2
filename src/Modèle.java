@@ -24,6 +24,7 @@ public class Modèle {
 
 	
 	public  Modèle() {
+		this.état = Etat.EN_COURS;
 		
 		this.propositions = new Rangée[N_TENTATIVES];
 		
@@ -47,11 +48,15 @@ public class Modèle {
 		
 		for(int i = 0;i < DIFFICULTE; i ++) {
 			
-			System.out.println(propositions[tentative].getIndexColor(i));
-			System.out.println(this.combinaison.testCouleur(propositions[tentative].getIndexColor(i), i));
 			if(!this.combinaison.testCouleur(propositions[tentative].getIndexColor(i), i)) {
 				drap = false;
 			}
+		}
+		
+		if(drap) {
+			this.état = Etat.GAGNE;
+		}else if(!drap && tentative == N_TENTATIVES) {
+			this.état = Etat.PERDU;
 		}
 		
 		return drap;
@@ -80,5 +85,7 @@ public class Modèle {
 		}
 			
 	}
+	
+
 	
 }

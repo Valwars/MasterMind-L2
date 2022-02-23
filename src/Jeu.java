@@ -10,8 +10,10 @@ public class Jeu {
 		mod.addPropositionColor(Color.yellow);
 		mod.addPropositionColor(Color.MAGENTA);
 		
-		
-		
+		mod.addPropositionColor(Color.MAGENTA);
+		mod.addPropositionColor(Color.GREEN);
+		mod.addPropositionColor(Color.yellow);
+		mod.addPropositionColor(Color.MAGENTA);
 
 	}
 
