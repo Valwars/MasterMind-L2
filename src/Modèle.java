@@ -10,5 +10,14 @@ public class Modèle {
 	
 	enum Etat { EN_COURS, GAGNE , PERDU}
 	
+	public Etat état;
+	
+	public Rangée combinaison;
+	
+	public Rangée[] propositions;
+	
+	public int tentative;
+	
+
 
 }
